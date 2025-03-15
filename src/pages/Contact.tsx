@@ -1,76 +1,79 @@
-
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import PageTransition from '@/components/PageTransition';
-import ContactButton from '@/components/ContactButton';
-import { toast } from 'sonner';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import PageTransition from "@/components/PageTransition";
+import ContactButton from "@/components/ContactButton";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast.success('Message sent! We\'ll get back to you soon.');
+    console.log("Form submitted:", formData);
+    toast.success("Message sent! We'll get back to you soon.");
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
   };
 
   const proprietorInfo = {
-    name: "Elena & Michael Rodriguez",
-    description: "As your hosts, we bring over 15 years of hospitality experience and a deep love for our local culture. We started this homestay to share the beauty of our region with travelers seeking an authentic experience. We look forward to welcoming you!",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027"
+    name: "Sohan Dsouza",
+    description:
+      "As your hosts, we bring over 15 years of hospitality experience and a deep love for our local culture. We started this homestay to share the beauty of our region with travelers seeking an authentic experience. We look forward to welcoming you!",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
   };
 
   const contactInfo = [
     {
       icon: <Phone className="h-5 w-5 text-homestay-green" />,
       title: "Phone",
-      info: "+1 (234) 567-890",
-      action: "tel:+1234567890"
+      info: "8431534435",
+      action: "tel:+91 9448819406",
     },
     {
       icon: <Mail className="h-5 w-5 text-homestay-green" />,
       title: "Email",
       info: "info@cozyretreat.com",
-      action: "mailto:info@cozyretreat.com"
+      action: "mailto:info@cozyretreat.com",
     },
     {
       icon: <MapPin className="h-5 w-5 text-homestay-green" />,
       title: "Address",
-      info: "123 Nature Lane, Peaceful Valley, CA 98765",
-      action: "https://maps.google.com"
+      info: "gandhi nagar, hnr, karanataka",
+      action: "https://maps.google.com",
     },
     {
       icon: <Clock className="h-5 w-5 text-homestay-green" />,
       title: "Check-in Hours",
       info: "2:00 PM - 8:00 PM",
-      action: null
-    }
+      action: null,
+    },
   ];
 
-  const inputClasses = "w-full px-4 py-3 rounded-xl border border-homestay-sand bg-white focus:outline-none focus:ring-2 focus:ring-homestay-green transition-shadow";
+  const inputClasses =
+    "w-full px-4 py-3 rounded-xl border border-homestay-sand bg-white focus:outline-none focus:ring-2 focus:ring-homestay-green transition-shadow";
 
   return (
     <PageTransition>
       <section className="pt-24 pb-16">
         <div className="homestay-container">
-          <motion.div 
+          <motion.div
             className="text-center max-w-2xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +83,8 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-homestay-brown/80">
-              Have questions or ready to book? We're here to help make your stay perfect.
+              Have questions or ready to book? We're here to help make your stay
+              perfect.
             </p>
           </motion.div>
 
@@ -94,7 +98,7 @@ const Contact = () => {
               <h2 className="text-2xl font-display font-semibold text-homestay-brown mb-6">
                 Get in Touch
               </h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <motion.div
@@ -113,9 +117,9 @@ const Contact = () => {
                         <h3 className="font-display font-medium text-homestay-brown mb-1">
                           {item.title}
                         </h3>
-                        <a 
+                        <a
                           href={item.action || undefined}
-                          className={`text-homestay-brown/70 ${item.action ? 'hover:text-homestay-green transition-colors' : ''}`}
+                          className={`text-homestay-brown/70 ${item.action ? "hover:text-homestay-green transition-colors" : ""}`}
                         >
                           {item.info}
                         </a>
@@ -184,10 +188,13 @@ const Contact = () => {
                 <h2 className="text-2xl font-display font-semibold text-homestay-brown mb-6">
                   Send Us a Message
                 </h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-homestay-brown mb-2 font-medium">
+                    <label
+                      htmlFor="name"
+                      className="block text-homestay-brown mb-2 font-medium"
+                    >
                       Your Name
                     </label>
                     <input
@@ -201,9 +208,12 @@ const Contact = () => {
                       placeholder="John Doe"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-homestay-brown mb-2 font-medium">
+                    <label
+                      htmlFor="email"
+                      className="block text-homestay-brown mb-2 font-medium"
+                    >
                       Email Address
                     </label>
                     <input
@@ -217,9 +227,12 @@ const Contact = () => {
                       placeholder="john@example.com"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="subject" className="block text-homestay-brown mb-2 font-medium">
+                    <label
+                      htmlFor="subject"
+                      className="block text-homestay-brown mb-2 font-medium"
+                    >
                       Subject
                     </label>
                     <input
@@ -233,9 +246,12 @@ const Contact = () => {
                       placeholder="Booking Inquiry"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="message" className="block text-homestay-brown mb-2 font-medium">
+                    <label
+                      htmlFor="message"
+                      className="block text-homestay-brown mb-2 font-medium"
+                    >
                       Message
                     </label>
                     <textarea
@@ -249,7 +265,7 @@ const Contact = () => {
                       placeholder="Let us know how we can help you..."
                     />
                   </div>
-                  
+
                   <motion.button
                     type="submit"
                     className="w-full bg-homestay-green text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-homestay-green/90 transition-colors"
