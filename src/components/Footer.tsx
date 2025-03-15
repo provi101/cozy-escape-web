@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start">
             <h2 className="text-2xl font-display font-bold mb-4">
-              <span className="text-homestay-sand">Cozy</span> Retreat
+              <span className="text-homestay-sand">Alana</span> Stay
             </h2>
             <p className="text-homestay-cream/80 text-center md:text-left">
               Experience the warmth and comfort of home away from home.
@@ -51,17 +51,27 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-display font-semibold mb-4">Contact Us</h3>
             <div className="flex flex-col space-y-3">
-              <a href="tel:+1234567890" className="flex items-center hover:text-homestay-sand transition-colors">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 (234) 567-890</span>
-              </a>
-              <a href="mailto:info@cozyretreat.com" className="flex items-center hover:text-homestay-sand transition-colors">
+              <div className="flex flex-col space-y-1">
+                <a href="tel:8431534435" className="flex items-center hover:text-homestay-sand transition-colors">
+                  <Phone className="h-4 w-4 mr-2" />
+                  <span>8431534435</span>
+                </a>
+                <a href="tel:9448819406" className="flex items-center hover:text-homestay-sand transition-colors">
+                  <Phone className="h-4 w-4 mr-2" />
+                  <span>94488 19406</span>
+                </a>
+              </div>
+              <a href="mailto:info@alanastay.com" className="flex items-center hover:text-homestay-sand transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
-                <span>info@cozyretreat.com</span>
+                <span>info@alanastay.com</span>
               </a>
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 mr-2 flex-shrink-0 mt-1" />
+                <span>Alana Stay, Honnavar, Karnataka, India</span>
+              </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
-                <span>123 Nature Lane, Peaceful Valley, CA 98765</span>
+                <span className="font-medium">Proprietor: </span>
+                <span className="ml-2">Sohan Dsouza</span>
               </div>
             </div>
           </div>
@@ -69,7 +79,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-white/20 mt-8 pt-6 text-center">
           <p className="text-sm text-homestay-cream/70">
-            &copy; {new Date().getFullYear()} Cozy Retreat Homestay. All rights reserved.
+            &copy; {new Date().getFullYear()} Alana Stay Homestay. All rights reserved.
           </p>
         </div>
       </div>

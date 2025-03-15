@@ -2,9 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, ShieldCheck, Coffee } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck } from 'lucide-react';
 import PageTransition from '@/components/PageTransition';
 import ContactButton from '@/components/ContactButton';
+import RoomCard from '@/components/RoomCard';
 
 const Index = () => {
   const features = [
@@ -17,29 +18,58 @@ const Index = () => {
       icon: <ShieldCheck className="h-6 w-6 text-homestay-green" />,
       title: "Safe & Secure",
       description: "Your safety is our priority with 24/7 security and contactless check-in options."
-    },
-    {
-      icon: <Coffee className="h-6 w-6 text-homestay-brown" />,
-      title: "Home-cooked Meals",
-      description: "Enjoy authentic local cuisine prepared with love and served in our cozy dining area."
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Ananya Sharma",
       quote: "The most relaxing homestay I've experienced. The attention to detail and warm hospitality made me feel right at home.",
-      location: "New York, USA"
+      location: "Bangalore, India"
     },
     {
-      name: "Miguel Sanchez",
-      quote: "A perfect balance of privacy and friendly interaction. The food was incredible and the rooms were spotless.",
-      location: "Barcelona, Spain"
+      name: "Vikram Mehta",
+      quote: "A perfect balance of privacy and friendly interaction. The rooms were spotless and the ambiance was serene.",
+      location: "Mumbai, India"
     },
     {
-      name: "Aiko Tanaka",
+      name: "Priya Patel",
       quote: "I extended my stay twice because I couldn't bear to leave! Such a welcoming atmosphere and beautiful surroundings.",
-      location: "Tokyo, Japan"
+      location: "Delhi, India"
+    }
+  ];
+
+  // Featured rooms for the preview section
+  const featuredRooms = [
+    {
+      name: "Garden View Suite",
+      description: "A peaceful retreat overlooking our lush garden. This spacious room features a comfortable queen bed and a private bathroom.",
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      price: 2500,
+      capacity: 2,
+      beds: 1,
+      features: [
+        "Garden view",
+        "Private bathroom",
+        "Air conditioning",
+        "Free WiFi",
+        "Breakfast included"
+      ]
+    },
+    {
+      name: "Sea Breeze Cottage",
+      description: "Perfect for families, our spacious cottage offers two bedrooms with a shared living area. Enjoy morning coffee while watching the sunrise.",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      price: 3800,
+      capacity: 4,
+      beds: 2,
+      features: [
+        "Two bedrooms",
+        "Private patio",
+        "Kitchenette",
+        "Air conditioning",
+        "Free WiFi"
+      ]
     }
   ];
 
@@ -50,7 +80,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
-            alt="Cozy Retreat Homestay" 
+            alt="Alana Stay Homestay" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-homestay-cream"></div>
@@ -63,7 +93,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Your Home Away From Home
+            Alana Stay
           </motion.h1>
           
           <motion.p 
@@ -72,7 +102,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Experience authentic local living with all the comforts you need for a memorable stay.
+            Experience authentic local living with all the comforts you need for a memorable stay in Honnavar.
           </motion.p>
           
           <motion.div 
@@ -130,7 +160,7 @@ const Index = () => {
             >
               <h2 className="section-title text-3xl">Our Cozy Retreat</h2>
               <p className="text-homestay-brown/80 mb-6">
-                Nestled in a serene location, our homestay offers the perfect blend of local culture and modern comforts. 
+                Nestled in a serene location in Honnavar, India, our homestay offers the perfect blend of local culture and modern comforts. 
                 Whether you're here for a weekend getaway or an extended stay, our warm hospitality will make you feel part of our family.
               </p>
               <p className="text-homestay-brown/80 mb-8">
@@ -158,7 +188,7 @@ const Index = () => {
             >
               <img 
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
-                alt="Cozy Retreat Surroundings" 
+                alt="Alana Stay Surroundings" 
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -166,8 +196,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Room Preview Section */}
       <section className="py-16 bg-homestay-sand/30">
+        <div className="homestay-container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="section-title text-3xl inline-block">Our Rooms</h2>
+            <p className="text-homestay-brown/80 mt-4">
+              Experience comfort and tranquility in our thoughtfully designed rooms.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredRooms.map((room, index) => (
+              <Link to="/rooms" key={index} className="block">
+                <RoomCard
+                  name={room.name}
+                  description={room.description}
+                  image={room.image}
+                  price={room.price}
+                  capacity={room.capacity}
+                  beds={room.beds}
+                  features={room.features}
+                />
+              </Link>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link to="/rooms">
+              <motion.button
+                className="bg-homestay-green text-white px-8 py-3 rounded-full font-medium shadow-lg hover:bg-homestay-green/90 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View All Rooms
+              </motion.button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-homestay-cream">
         <div className="homestay-container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="section-title text-3xl inline-block">Why Choose Us</h2>
@@ -176,7 +246,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -202,7 +272,7 @@ const Index = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-16 bg-homestay-cream">
+      <section className="py-16 bg-homestay-sand/30">
         <div className="homestay-container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="section-title text-3xl inline-block">Guest Experiences</h2>
@@ -239,7 +309,7 @@ const Index = () => {
         </div>
       </section>
 
-      <ContactButton phoneNumber="+1234567890" />
+      <ContactButton phoneNumbers={["8431534435", "94488 19406"]} />
     </PageTransition>
   );
 };

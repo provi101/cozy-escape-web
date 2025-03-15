@@ -8,10 +8,10 @@ import ContactButton from '@/components/ContactButton';
 const Rooms = () => {
   const rooms = [
     {
-      name: "Garden Suite",
+      name: "Garden View Suite",
       description: "A peaceful retreat overlooking our lush garden. This spacious room features a comfortable queen bed, private bathroom, and a charming sitting area to relax after a day of exploration.",
       image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
-      price: 85,
+      price: 2500,
       capacity: 2,
       beds: 1,
       features: [
@@ -26,7 +26,7 @@ const Rooms = () => {
       name: "Family Cottage",
       description: "Perfect for families, our spacious cottage offers two bedrooms with a shared living area. Enjoy morning coffee on your private patio while watching the sunrise.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-      price: 120,
+      price: 3800,
       capacity: 4,
       beds: 2,
       features: [
@@ -39,14 +39,14 @@ const Rooms = () => {
       ]
     },
     {
-      name: "Mountain View Room",
-      description: "Wake up to stunning mountain views in this cozy room featuring traditional decor with modern amenities. The perfect blend of comfort and natural beauty.",
+      name: "Sea View Room",
+      description: "Wake up to stunning Arabian Sea views in this cozy room featuring traditional Konkan decor with modern amenities. The perfect blend of comfort and natural beauty.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      price: 95,
+      price: 2800,
       capacity: 2,
       beds: 1,
       features: [
-        "Mountain view",
+        "Sea view",
         "Private bathroom",
         "Air conditioning",
         "Free WiFi",
@@ -55,9 +55,9 @@ const Rooms = () => {
     },
     {
       name: "Deluxe Suite",
-      description: "Our most spacious accommodation offering luxury and comfort. Features include a king-size bed, separate living area, and a private balcony with panoramic views.",
+      description: "Our most spacious accommodation offering luxury and comfort. Features include a king-size bed, separate living area, and a private balcony with panoramic views of Honnavar.",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-      price: 150,
+      price: 4500,
       capacity: 2,
       beds: 1,
       features: [
@@ -119,19 +119,21 @@ const Rooms = () => {
             <p className="text-homestay-brown/80 mb-4">
               Planning a family reunion or friend's getaway? Contact us for special group rates and packages.
             </p>
-            <motion.a
-              href="tel:+1234567890"
-              className="inline-block bg-homestay-green text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-homestay-green/90 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Call for Group Bookings
-            </motion.a>
+            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="tel:8431534435"
+                className="inline-block bg-homestay-green text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-homestay-green/90 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Call for Group Bookings
+              </motion.a>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      <ContactButton phoneNumber="+1234567890" />
+      <ContactButton phoneNumbers={["8431534435", "94488 19406"]} />
     </PageTransition>
   );
 };
