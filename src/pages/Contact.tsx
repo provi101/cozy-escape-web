@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   const proprietorInfo = {
-    name: "Sohan Dsouza",
+    name: "sohan Dsouza",
     description:
       "As your hosts, we bring over 15 years of hospitality experience and a deep love for our local culture. We started this homestay to share the beauty of our region with travelers seeking an authentic experience. We look forward to welcoming you!",
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
@@ -49,14 +49,14 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5 text-homestay-green" />,
       title: "Email",
-      info: "info@cozyretreat.com",
-      action: "mailto:info@cozyretreat.com",
+      info: "info@alanastay.com",
+      action: "mailto:info@alanastay.com",
     },
     {
       icon: <MapPin className="h-5 w-5 text-homestay-green" />,
       title: "Address",
-      info: "gandhi nagar, hnr, karanataka",
-      action: "https://maps.google.com",
+      info: "whitefield, banglore, karanataka",
+      action: "https://maps.app.goo.gl/5s6QWUn6WLJnTPSg9",
     },
     {
       icon: <Clock className="h-5 w-5 text-homestay-green" />,
@@ -137,7 +137,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1688226551010!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.910716004426!2d77.71589017437996!3d12.964566687016092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1742042777573!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -205,7 +205,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className={inputClasses}
-                      placeholder="John Doe"
+                      placeholder="sohan Doe"
                     />
                   </div>
 
@@ -224,7 +224,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className={inputClasses}
-                      placeholder="john@example.com"
+                      placeholder="sohan@example.com"
                     />
                   </div>
 

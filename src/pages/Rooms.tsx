@@ -55,7 +55,7 @@ const Rooms = () => {
     },
     {
       name: "Deluxe Suite",
-      description: "Our most spacious accommodation offering luxury and comfort. Features include a king-size bed, separate living area, and a private balcony with panoramic views of Honnavar.",
+      description: "Our most spacious accommodation offering luxury and comfort. Features include a king-size bed, separate living area, and a private balcony with panoramic views of banglore.",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
       price: 4500,
       capacity: 2,

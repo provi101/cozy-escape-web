@@ -102,7 +102,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Experience authentic local living with all the comforts you need for a memorable stay in Honnavar.
+            Experience authentic local living with all the comforts you need for a memorable stay in banglore.
           </motion.p>
           
           <motion.div 
@@ -160,7 +160,7 @@ const Index = () => {
             >
               <h2 className="section-title text-3xl">Our Cozy Retreat</h2>
               <p className="text-homestay-brown/80 mb-6">
-                Nestled in a serene location in Honnavar, India, our homestay offers the perfect blend of local culture and modern comforts. 
+                Nestled in a serene location in banglore, India, our homestay offers the perfect blend of local culture and modern comforts. 
                 Whether you're here for a weekend getaway or an extended stay, our warm hospitality will make you feel part of our family.
               </p>
               <p className="text-homestay-brown/80 mb-8">

@@ -49,8 +49,8 @@ const Navbar: React.FC = () => {
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="relative z-50">
-          <h1 className="text-2xl font-display font-bold text-homestay-brown">
-            <span className="text-homestay-green">Cozy</span> Retreat
+          <h1 className="text-2xl font-display font-bold text-homestay-sand">
+            <span className="text-homestay-sand">Alana</span> Stay
           </h1>
         </Link>
 

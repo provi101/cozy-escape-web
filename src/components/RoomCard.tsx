@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bed, Users, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface RoomCardProps {
   name: string;
@@ -70,7 +71,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
             </div>
           ))}
         </div>
-        
+        <Link to="/contact">
         <motion.button
           className="w-full bg-homestay-sand text-homestay-brown font-medium py-3 rounded-xl hover:bg-homestay-orange hover:text-white transition-colors duration-300 mt-2"
           whileHover={{ scale: 1.02 }}
@@ -78,9 +79,11 @@ const RoomCard: React.FC<RoomCardProps> = ({
         >
           Book Now
         </motion.button>
+        </Link>
       </div>
     </motion.div>
   );
 };
 
 export default RoomCard;
+//

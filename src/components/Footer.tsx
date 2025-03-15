@@ -67,11 +67,11 @@ const Footer: React.FC = () => {
               </a>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 flex-shrink-0 mt-1" />
-                <span>Alana Stay, Honnavar, Karnataka, India</span>
+                <span>Alana Stay, banglore, Karnataka, India</span>
               </div>
               <div className="flex items-center">
                 <span className="font-medium">Proprietor: </span>
-                <span className="ml-2">Sohan Dsouza</span>
+                <span className="ml-2">sohan Dsouza</span>
               </div>
             </div>
           </div>
