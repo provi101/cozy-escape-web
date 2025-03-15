@@ -266,7 +266,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <ContactButton phoneNumber="+1234567890" />
+      <ContactButton phoneNumbers={["8431534435", "94488 19406"]} />
     </PageTransition>
   );
 };
